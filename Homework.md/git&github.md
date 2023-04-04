@@ -1,0 +1,6 @@
+|这个作业属于哪个课程|[https://edu.cnblogs.com/campus/fzu/2022OOP](https://edu.cnblogs.com/campus/fzu/2022OOP)|
+|-- |-- |
+|这个作业要求在哪里|https://edu.cnblogs.com/campus/fzu/2022OOP/homework/12432|
+|这个作业的目标|安装配置Git，学习GitHub使用|
+|作业正文|1、在[官网](https://git-scm.com/)下载安装了Git，并在[GitHub](https://github.com/)注册了账号。<br><br>2、在Git Bash输入` ssh-keygen -t rsa -C “邮箱”`生成了SSH key,将公钥添加至GitHub账号。返回Git Bash输入`ssh -T git@github.com`发现未能成功连接GitHub<br><br>遂查询发现需要输入`yes`，本来保持Linux上的习惯一般默认回车为`Y`。于是又去Linux环境尝试了一下，好吧也是手动输入`yes`。<br><br>3、输入`cd D:/Code`进入我保存代码的文件夹，输入`git init`初始化仓库，输入`git add .`添加索引（也有叫添加入暂存区的）。依次输入`git commit -m "备注"` `git remote add origin url` `git pull origin master --allow-unrelated-histories` `git push -u origin master`即可push成功。<br>有个小插曲，我并不想把我整个Code文件夹全部push上去，遂执行`git commit -m "备注"`前动了手脚，然后在`git pull origin master --allow-unrelated-histories`出现了`fatal:couldn't find remote ref master`的报错。但输入`git config user.name` `git config user.email` `git remote -v`查询配置情况一切正常。按上文从`git init`开始重新输入至`git push -u origin master`才push成功。还不明白是为什么，但问题暂时无法复现，而且忘了截图（<br><br>最后是成功push到GitHub的截图<br>|
+|其他参考文献|https://blog.csdn.net/u013295518/article/details/78746007<br>https://blog.csdn.net/yuxuan89814/article/details/115083810<br>https://www.cnblogs.com/tig666666/p/8425865.html|
